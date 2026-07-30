@@ -31,23 +31,23 @@ scrape_configs:
         labels:
           app: "prometheus"
 
-  - job_name: "node-1"
-    static_configs:
-      - targets: ["54.172.15.36:9100"]
-        labels:
-          app: "node-1"
-          name: "node-1"
+  # - job_name: "node-1"
+  #   static_configs:
+  #     - targets: ["54.172.15.36:9100"]
+  #       labels:
+  #         app: "node-1"
+  #         name: "node-1"
 
-  # - job_name: ec2_sd
-  #   ec2_sd_configs:
-  #     - region: us-east-1
-  #       port: 9100
-  #       filters:
-  #       - name: "tag:Monitoring"
-  #         values: ["true"]
+  - job_name: ec2_sd
+    ec2_sd_configs:
+      - region: us-east-1
+        port: 9100
+        filters:
+        - name: "tag:monitoring"
+          values: ["true"]
 
-  #   relabel_configs:
-  #     - source_labels: [__meta_ec2_instance_id]
-  #       target_label: instance_id
-  #     - source_labels: [__meta_ec2_tag_Name]
-  #       target_label: name
+    relabel_configs:
+      - source_labels: [__meta_ec2_instance_id]
+        target_label: instance_id
+      - source_labels: [__meta_ec2_tag_Name]
+        target_label: name
