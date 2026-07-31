@@ -35,3 +35,5 @@ wget https://github.com/prometheus/node_exporter/releases/download/v1.12.1/node_
 ## extract the node exporter
 tar -xf node_exporter-1.12.1.linux-amd64.tar.gz
 
+## Create the node_exporter service its in th folder
+vim /ect/systemd/system/node_exporter.service
