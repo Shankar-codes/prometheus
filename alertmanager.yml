@@ -1,11 +1,11 @@
 global:
   # The smarthost and SMTP sender used for mail notifications.
   smtp_smarthost: smtp.gmail.com:587
-  smtp_from: shantimmu@gmail.com
-  smtp_auth_username: shantimmu@gmail.com
+  smtp_from: shankar.ellamma@gmail.com
+  smtp_auth_username: shankar.ellamma@gmail.com
   # Use an App Password here, NOT your main account password
-  smtp_auth_password: dgrkyqgauodmmvgg
-  smtp_auth_identity: shantimmu@gmail.com
+  smtp_auth_password: gdoosnyekflhikfd
+  smtp_auth_identity: shankar.ellamma@gmail.com
   smtp_require_tls: true # Gmail requires TLS
   resolve_timeout: 5m
 
@@ -16,7 +16,7 @@ route:
 receivers:
 - name: 'gmail-alerts'
   email_configs:
-  - to: shankar.ellamma@joindevops.com
+  - to: shankar.ellamma@gmail.com
     # from, smarthost, auth_username, auth_password, etc. can be defined here
     # to override the global settings if needed.
     send_resolved: true # Send a notification when the alert is resolved
