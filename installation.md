@@ -49,3 +49,7 @@ systemctl status node_exporter
 ## mention the AWS tags in nodes
 check the tags in prometheus.yml
 
+### Grafana Installation
+wget -q -O gpg.key https://rpm.grafana.com/gpg.key
+if not working use below command
+curl -o -q -O gpg.key https://rpm.grafana.com/gpg.key
