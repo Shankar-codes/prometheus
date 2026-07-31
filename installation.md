@@ -71,3 +71,6 @@ sslverify=1
 # install grafana
 sudo dnf install grafana -y
 sudo dnf install grafana-enterprise -y
+
+systemctl enable grafana-server
+systemctl start grafana-server
