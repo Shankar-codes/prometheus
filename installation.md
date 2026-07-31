@@ -15,7 +15,7 @@ ln -s prometheus-3.5.5.linux-amd64 prometheus
 ## Create the prometheus service its in th folder
 vim /etc/systemd/system/prometheus.service
 
-## run systemctl commanda
+## run systemctl commands
 systemctl enable prometheus
 systemctl start prometheus
 systemctl status prometheus
@@ -40,4 +40,12 @@ ln -s node_exporter-1.12.1.linux-amd64 node_exporter
 
 ## Create the node_exporter service its in th folder
 vim /etc/systemd/system/node_exporter.service
+
+## run systemctl commands
+systemctl enable node_exporter
+systemctl start node_exporter
+systemctl status node_exporter
+
+## mention the AWS tags in nodes
+check the tags in prometheus.yml
 
