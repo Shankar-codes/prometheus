@@ -13,7 +13,7 @@ tar -xf prometheus-3.5.5.linux-amd64.tar.gz
 ln -s prometheus-3.5.5.linux-amd64 prometheus
 
 ## Create the prometheus service its in th folder
-vim /ect/systemd/system/prometheus.service
+vim /etc/systemd/system/prometheus.service
 
 ## run systemctl commanda
 systemctl enable prometheus
@@ -30,10 +30,14 @@ systemctl status prometheus
 cd /opt/
 
 ## Download the node exporter
-wget https://github.com/prometheus/node_exporter/releases/download/v1.12.1/node_exporter-1.12.1.linux-amd64.tar.gz
+curl -o https://github.com/prometheus/node_exporter/releases/download/v1.12.1/node_exporter-1.12.1.linux-amd64.tar.gz
 
 ## extract the node exporter
 tar -xf node_exporter-1.12.1.linux-amd64.tar.gz
 
+## create the link file
+ln -s node_exporter-1.12.1.linux-amd64 node_exporter
+
 ## Create the node_exporter service its in th folder
-vim /ect/systemd/system/node_exporter.service
+vim /etc/systemd/system/node_exporter.service
+
