@@ -10,4 +10,4 @@ groups:
     labels:
       severity: Critical
     annotations:
-      summary: "Instance {{ $labels.instance_id }} Down"
+      summary: "Instance ${{ labels.instance_id }} Down"
