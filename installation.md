@@ -21,7 +21,7 @@ systemctl start prometheus
 systemctl status prometheus
 
 ## check the netstat port - 9090 should be opened
-<prometheus-public-ip>:9090
+http://<prometheus-public-ip>:9090
 
 ## Attach the roles and policy to the prometheus server for scraping the nodes and also update in the prometheus.yml file about dynamic scraping
 
@@ -74,3 +74,12 @@ sudo dnf install grafana-enterprise -y
 
 systemctl enable grafana-server
 systemctl start grafana-server
+
+port 3000 will be opened
+
+# open the grafana in the browser
+http://<prometheus-public-ip>:3000
+
+login to grafana 
+
+add the new connections and install the prometheus
