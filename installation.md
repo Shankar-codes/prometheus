@@ -53,3 +53,21 @@ check the tags in prometheus.yml
 wget -q -O gpg.key https://rpm.grafana.com/gpg.key
 if not working use below command
 curl -o -q -O gpg.key https://rpm.grafana.com/gpg.key
+
+sudo rpm --import gpg.key
+
+## create repo
+vim /etc/yum.repos.d/grafana.repo
+
+[grafana]
+name=grafana
+baseurl=https://rpm.grafana.com
+repo_gpgcheck=1
+enabled=1
+gpgcheck=1
+gpgkey=https://rpm.grafana.com/gpg.key
+sslverify=1
+
+# install grafana
+sudo dnf install grafana -y
+sudo dnf install grafana-enterprise -y
