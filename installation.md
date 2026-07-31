@@ -25,3 +25,13 @@ systemctl status prometheus
 
 ## Attach the roles and policy to the prometheus server for scraping the nodes and also update in the prometheus.yml file about dynamic scraping
 
+### Node exporter installtion in the nodes
+## manual installation folder
+cd /opt/
+
+## Download the node exporter
+wget https://github.com/prometheus/node_exporter/releases/download/v1.12.1/node_exporter-1.12.1.linux-amd64.tar.gz
+
+## extract the node exporter
+tar -xf node_exporter-1.12.1.linux-amd64.tar.gz
+
